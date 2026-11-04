@@ -56,5 +56,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Pages publishing occasionally stalls; the default 10-minute wait cancels the deployment,
+      # and GitHub then refuses to redeploy that commit. 20 minutes leaves headroom.
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000
