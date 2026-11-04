@@ -1,20 +1,22 @@
+// whiteLogo: the file is white artwork on a transparent background, which disappears
+// on this white section. Those logos are rendered as dark silhouettes instead.
 const clientes = [
-  { name: "Garden", logo: "/images/logos/garden-logo.png" },
+  { name: "Garden", logo: "/images/logos/garden-logo.png", whiteLogo: true },
   { name: "Cavallaro", logo: "/images/logos/cavallaro-logo.png" },
   { name: "Inpaco", logo: "/images/logos/inpaco-logo.png" },
   { name: "EcoTech", logo: "/images/logos/ecotech-logo.jpg" },
   { name: "BioTech", logo: "/images/logos/biotech-logo.png" },
   { name: "Agua Bes", logo: "/images/logos/agua-bes.jpg" },
-  { name: "Apleno", logo: "/images/logos/apleno-logo.png" },
+  { name: "Apleno", logo: "/images/logos/apleno-logo.png", whiteLogo: true },
   { name: "Asociación Rural", logo: "/images/logos/asociacion-rural-logo.png" },
   { name: "Clínica Imagix", logo: "/images/logos/clinica-imagix.png" },
   { name: "Cuevas Hermanos", logo: "/images/logos/cuevas-hermanos.jpg" },
   { name: "Dazler", logo: "/images/logos/dazler-logo.png" },
   { name: "Etiquetas Paraguay", logo: "/images/logos/etiquetas-paraguay.jpg" },
   { name: "Flexnet", logo: "/images/logos/flexnet-logo.png" },
-  { name: "IMGI", logo: "/images/logos/imgi_17_TyCBlanco.png" },
+  { name: "IMGI", logo: "/images/logos/imgi_17_TyCBlanco.png", whiteLogo: true },
   { name: "Lacerie", logo: "/images/logos/lacerie-logo.png" },
-  { name: "SAX", logo: "/images/logos/sax-logo.png" },
+  { name: "SAX", logo: "/images/logos/sax-logo.png", whiteLogo: true },
   { name: "Tatakua", logo: "/images/logos/tatakua-logo.png" },
   { name: "Tema Automotores", logo: "/images/logos/tema-automotores.png" },
   { name: "UAP", logo: "/images/logos/uap-logo.png" },
@@ -22,6 +24,9 @@ const clientes = [
   { name: "UMA", logo: "/images/logos/uma-logo.png" },
   { name: "Voicenter", logo: "/images/logos/voicenter-logo.png" }
 ];
+
+const logoClassName = (whiteLogo?: boolean) =>
+  `h-16 w-auto max-w-full filter grayscale opacity-70 hover:opacity-100 transition-opacity${whiteLogo ? ' brightness-0' : ''}`;
 
 const ClientesSection = () => (
   <section className="py-16 bg-white overflow-hidden relative">
@@ -45,7 +50,7 @@ const ClientesSection = () => (
             <img
               src={cliente.logo}
               alt={cliente.name}
-              className="h-16 w-auto max-w-full filter grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className={logoClassName(cliente.whiteLogo)}
             />
           </div>
         ))}
@@ -55,7 +60,7 @@ const ClientesSection = () => (
             <img
               src={cliente.logo}
               alt={cliente.name}
-              className="h-16 w-auto max-w-full filter grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className={logoClassName(cliente.whiteLogo)}
             />
           </div>
         ))}
