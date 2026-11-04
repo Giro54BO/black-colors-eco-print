@@ -33,9 +33,17 @@ jobs:
       - run: npm run build
 
       # The app uses BrowserRouter, so routes like /productos/impresoras have no file on disk.
-      # GitHub Pages serves 404.html for unknown paths; a copy of index.html lets React Router
-      # render the right page on direct visits and refreshes.
-      - run: cp dist/index.html dist/404.html
+      # Each sitemap route gets a copy of index.html (GitHub Pages serves /a/b from a/b.html
+      # with status 200, which search engines need). 404.html covers every other path,
+      # such as /eventos/:slug, so React Router still renders it on direct visits.
+      - name: Add a page file for every sitemap route
+        run: |
+          for route in $(grep -o '<loc>[^<]*</loc>' dist/sitemap.xml | sed -E 's#<loc>https?://[^/]+/?##; s#/?</loc>##'); do
+            mkdir -p "dist/$(dirname "$route")"
+            cp dist/index.html "dist/$route.html"
+          done
+          cp dist/index.html dist/404.html
+          ls dist/*.html dist/*/*.html
 
       - uses: actions/upload-pages-artifact@v4
         with:
