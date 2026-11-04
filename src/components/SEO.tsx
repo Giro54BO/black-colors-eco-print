@@ -356,12 +356,6 @@ const SEO = ({
       },
       {
         '@type': 'SiteNavigationElement',
-        name: 'Eventos',
-        url: `${siteUrl}/eventos`,
-        description: 'Eventos, ferias y actividades de Black Colors'
-      },
-      {
-        '@type': 'SiteNavigationElement',
         name: 'Contacto',
         url: `${siteUrl}/contacto`,
         description: 'Información de contacto y ubicación'

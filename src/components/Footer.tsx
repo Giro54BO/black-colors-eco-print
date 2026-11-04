@@ -115,11 +115,6 @@ const Footer = () => (
               </a>
             </li>
             <li>
-              <a href="/eventos" className="text-white hover:underline underline-offset-4 transition-colors duration-300 hover:translate-x-2 transform inline-block">
-                Eventos
-              </a>
-            </li>
-            <li>
               <a href="/contacto" className="text-white hover:underline underline-offset-4 transition-colors duration-300 hover:translate-x-2 transform inline-block">
                 Contacto
               </a>

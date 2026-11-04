@@ -27,8 +27,6 @@ import ServicioTecnico from "./pages/servicios/tecnico/index";
 
 // Otras páginas
 import Transformar from "./pages/transformar/index";
-import Eventos from "./pages/eventos/index";
-import EventoDetalle from "./pages/eventos/[slug]";
 import Contacto from "./pages/contacto/index";
 import NotFound from "./pages/NotFound";
 
@@ -77,8 +75,6 @@ const App = () => (
             <Route path="/servicios/alquileres" element={<PageTransition><Alquileres /></PageTransition>} />
             <Route path="/servicios/diferenciados" element={<PageTransition><ServiciosDiferenciados /></PageTransition>} />
             <Route path="/transformar" element={<PageTransition><Transformar /></PageTransition>} />
-            <Route path="/eventos" element={<PageTransition><Eventos /></PageTransition>} />
-            <Route path="/eventos/:slug" element={<PageTransition><EventoDetalle /></PageTransition>} />
             <Route path="/contacto" element={<PageTransition><Contacto /></PageTransition>} />
             <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
           </Routes>

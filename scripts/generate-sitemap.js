@@ -24,7 +24,6 @@ const routes = [
   
   // Otras páginas importantes
   { path: '/transformar', priority: '0.8', changefreq: 'monthly', lastmod: currentDate },
-  { path: '/eventos', priority: '0.7', changefreq: 'weekly', lastmod: currentDate },
   { path: '/contacto', priority: '0.9', changefreq: 'monthly', lastmod: currentDate },
 ];
 

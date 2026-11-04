@@ -14,7 +14,6 @@ const Navigation = () => {
     { name: 'PRODUCTOS', path: '/productos', hasSubmenu: true },
     { name: 'SERVICIOS', path: '/servicios', hasSubmenu: true },
     { name: 'PROYECTO TRANSFORMAR', path: '/transformar' },
-    { name: 'EVENTOS', path: '/eventos' },
     { name: 'CONTACTO', path: '/contacto' }
   ];
 

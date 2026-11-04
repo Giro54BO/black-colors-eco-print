@@ -24,7 +24,6 @@ This project now includes automated pre-rendering to improve SEO and Google inde
    - `/servicios/alquileres`
    - `/servicios/diferenciados`
    - `/transformar`
-   - `/eventos`
    - `/contacto`
 
 ## Scripts Available

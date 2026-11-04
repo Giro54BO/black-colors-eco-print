@@ -98,7 +98,6 @@ Se ha implementado el schema `SiteNavigationElement` de Schema.org para mejorar 
 - [ ] `/servicios/tecnico`
 - [ ] `/servicios/diferenciados`
 - [ ] `/transformar`
-- [ ] `/eventos`
 - [ ] `/contacto`
 
 ## 🛠️ Para Desarrolladores

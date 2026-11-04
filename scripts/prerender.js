@@ -19,7 +19,6 @@ const routes = [
   '/servicios/alquileres',
   '/servicios/diferenciados',
   '/transformar',
-  '/eventos',
   '/contacto'
 ];
 
